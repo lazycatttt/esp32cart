@@ -1,6 +1,6 @@
 #include <WebServer.h>
 #include <WiFi.h>
-#include <esp32cam.h>//install this lib first
+#include <esp32cam.h>//https://github.com/yoursunny/esp32cam
  
 const char* WIFI_SSID = "Amaan";
 const char* WIFI_PASS = "12345678";
