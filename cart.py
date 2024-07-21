@@ -56,6 +56,7 @@ def calculate_total():
     conn.close()
     return total_cost
 
+create_table()
 
 while True:
     img_resp=urllib.request.urlopen(url+'cam-hi.jpg')
@@ -69,14 +70,13 @@ while True:
         if prev == pres:
             pass
         else:
-            create_table()
             str(obj.data)
             print(obj.data[5:])
             add_item(obj.data[:4], int(obj.data[5:]))
             print("Items: ",obj.data[:4]," ","Price: ",int(obj.data[5:]))
             prev=pres
             
-        cv2.putText(frame, (obj.data[:4],int(obj.data[5:])), (50, 50), font, 2,(0, 0, 255), 3)
+        cv2.putText(frame, str(obj.data), (50, 50), font, 2,(0, 0, 255), 3)
  
     cv2.imshow("live transmission", frame)
  
