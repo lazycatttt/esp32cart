@@ -75,11 +75,11 @@ while True:
             x=str(obj.data)
             add_item(obj.data[:4], int(obj.data[5:]))
             view_list()
-            cv2.putText(frame, str(WAIT), (50, 50), font, 2,(0, 0, 255), 3)
-            time.sleep(.5)
+            cv2.putText(frame, str("WAIT"), (50, 50), font, 2,(0, 0, 255), 3)
+            time.sleep(.2)
             y=str(obj.data)
             if x==y:
-                delete_item(obj.data[:4], int(obj.data[5:]))
+                delete_item(obj.data[:4])
                 view_list()
             prev=pres
             
@@ -96,3 +96,4 @@ while True:
         break
  
 cv2.destroyAllWindows()
+
